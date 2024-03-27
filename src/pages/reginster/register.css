@@ -1,0 +1,62 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+}
+.register-container{
+    height: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-wrap: wrap;
+}
+.register-box{
+    z-index: 5;
+    background-color: var(--color2);
+    width: 300px;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+.r{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.r input{
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+}
+.register-box button{
+    background-color: var(--color1);
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+}
+.register-box button:hover{
+    background-color: var(--shadow);
+}
+.span{
+    width: 8.33333333333333333333333333%;
+    height: 10%;
+    background-color: var(--color2);
+    transition-delay: 0.5s;
+    transition: 1s;
+}
+.span:hover{
+    transition: 0.000001s;
+    background-color: var(--color1);
+}

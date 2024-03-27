@@ -1,0 +1,142 @@
+.products{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sort{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    direction: rtl;
+    position: relative;
+    z-index: 1;
+}
+.sort ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.sort ul li{
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: 0.3s;
+}
+.sort ul li:hover{
+    background-color: var(--color1);
+    border-bottom: 2px solid black;
+}
+.sort ul li.active{
+    background-color: var(--color1);
+    border-bottom: 2px solid black;
+}
+.sort span{
+    display: none;
+    cursor: pointer;
+}
+.each-product{
+    width: 100%;
+    height: 90%;
+}
+
+.pros{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.pros .each-item{
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+}
+.pros .each-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.pagination{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+}
+.page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination .page-num{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.pagination .page-num.active{
+    background-color: var(--color1);
+}
+.pagination .page-num:hover{
+    background-color: var(--color1);
+}
+.previous , .next{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previous.disabled a , .next.disabled a{
+    color: gray ;
+    cursor: not-allowed;
+}
+.previous a , .next a{
+    text-decoration: none;
+    color: black;
+}
+.previous:hover , .next:hover{
+    background-color: var(--color1);
+}
+.products-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+@media screen and (max-width : 1100px) {
+    .products{
+        width: 100%;
+    }
+    .sort{
+        background-color: rgb(235, 235, 235);
+    }
+    .sort ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 100px;
+        width: 200px;
+        background-color: var(--color2);
+        color: var(--text2);
+    }
+    .sort ul.opensort{
+        display: block;
+    }
+    .sort ul li{
+        width: 100%;
+    }
+    .sort span{
+        display: block;
+        height: 50px;
+    }
+    .sort span:hover{
+        background-color: lightgray;
+        border-bottom: 0;
+    }
+}

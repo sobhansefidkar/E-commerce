@@ -1,0 +1,95 @@
+.products-page{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.pp-c{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.title-products{
+    width: 100%;
+    height: 150px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(238, 238, 238);
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px 2px lightgray;
+}
+.title-products h1{
+    z-index: 1;
+    padding: 0px 10px;
+}
+.absolute-span{
+    position: absolute;
+    background-color: var(--color1);
+}
+.absolute-span.s1{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    right: 50%;
+    transform: rotate(10deg);
+    transform: translateY(200%);
+    animation: 30s span infinite;
+}
+.absolute-span.s2{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    right: 10%;
+    transform: rotate(15deg);
+    transform: translateY(200%);
+    animation: 25s span infinite;
+}
+.absolute-span.s3{
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    right: 20%;
+    transform: rotate(10deg);
+    transform: translateY(200%);
+    animation: 22s span infinite;
+}
+.absolute-span.s4{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    right: 80%;
+    transform: translateY(200%);
+    animation: 27s span infinite;
+}
+.absolute-span.s5{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    right: 65%;
+    transform: rotate(50deg);
+    transform: translateY(200%);
+    animation: 20s span infinite;
+}
+@keyframes span {
+    0%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(-200%);
+    }
+}
+
+.h-p-f{
+    display: flex;
+    width: 100%;
+}
+@media screen and (max-width : 1100px) {
+    .h-p-f{
+        flex-direction: column;
+    }   
+}

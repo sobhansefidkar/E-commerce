@@ -1,0 +1,208 @@
+.holder-menu{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 100;
+    transition: 0.3s;
+    left: 100px;
+    direction: rtl;
+}
+.holder-menu.open .menu{
+    position: relative;
+    display: flex;
+    animation: 0.5s open 1;
+}
+@keyframes open {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.menu.controller{
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.controller::before{
+    content: "منو";
+    display: none;
+}
+.menu.controller:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.controller:hover::before{
+    display: block;
+}
+
+.menu.l-search{
+    display: none;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.l-search::before{
+    content: "جستجو";
+    display: none;
+}
+.menu.l-search:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.l-search:hover::before{
+    display: block;
+    animation: 0.3s x 1;
+}
+@keyframes x {
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.menu.l-home{
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.l-home::before{
+    content: "صفحه اصلی";
+    display: none;
+}
+.menu.l-home:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.l-home:hover::before{
+    display: block;
+    animation: 0.3s text 1;
+}
+
+.menu.l-shop{
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.l-shop::before{
+    content: "محصولات";
+    display: none;
+}
+.menu.l-shop:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.l-shop:hover::before{
+    display: block;
+    animation: 0.3s text 1;
+}
+
+.menu.l-prof{
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.l-prof::before{
+    content: "پنل کاربری";
+    display: none;
+}
+.menu.l-prof:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.l-prof:hover::before{
+    display: block;
+    animation: 0.3s text 1;
+}
+
+.menu.l-cart{
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.l-cart::before{
+    content: "سبدخرید";
+    display: none;
+}
+.menu.l-cart:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.l-cart:hover::before{
+    display: block;
+    animation: 0.3s text 1;
+}
+
+.menu.l-order{
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.l-order::before{
+    content: "سفارشات";
+    display: none;
+}
+.menu.l-order:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.l-order:hover::before{
+    display: block;
+    animation: 0.3s text 1;
+}
+
+.menu.l-out{
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu.l-out::before{
+    content: "خروج";
+    display: none;
+}
+.menu.l-out:hover{
+    width: 150px;
+    border-radius: 30px;
+}
+.menu.l-out:hover::before{
+    display: block;
+    animation: 0.3s text 1;
+}
+@keyframes text {
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.menu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px 5px var(--shadow);
+}
+@media screen and (max-width : 1500px) {
+    .holder-menu{
+        left: 0;
+        top: 50px;
+    }
+}

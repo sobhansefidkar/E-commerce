@@ -1,0 +1,10 @@
+.cart-container{
+    height: auto;
+    direction: rtl;
+    display: flex;
+}
+@media screen and (max-width : 1000px) {
+    .cart-container{
+        flex-direction: column-reverse;
+    }
+}
